@@ -6,5 +6,25 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
+  ],
+  siteMetadata: {
+    title: "Gatsby-project",
+  },
 }
